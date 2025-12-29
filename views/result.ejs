@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Result</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="card">
+    <% if (error) { %>
+      <h2><%= error %></h2>
+    <% } else { %>
+      <h1><%= city %></h1>
+      <h2>🌧 Rain Chance Tomorrow</h2>
+      <p class="temp"><%= rainChance %>%</p>
+
+      <% if (rainChance > 50) { %>
+        <p>☔ Take an umbrella</p>
+      <% } else { %>
+        <p>😎 No rain expected</p>
+      <% } %>
+    <% } %>
+
+    <a href="/">← Back</a>
+  </div>
+</body>
+</html>
